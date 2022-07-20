@@ -245,7 +245,6 @@ public class ResourceCentre {
 			String assetTag = chromebookList.get(i).getAssetTag();
 			
 			if (tag.equalsIgnoreCase(assetTag)
-					
 					&& chromebookList.get(i).getIsAvailable() == true) {
 				
 				chromebookList.get(i).setIsAvailable(false);
