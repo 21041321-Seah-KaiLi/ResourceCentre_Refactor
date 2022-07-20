@@ -2,26 +2,10 @@ import java.util.ArrayList;
 
 public class ResourceCentre {
 
-
-	/**
-	 * 
-	 */
 	private static final int OPTION_RETURN = 4;
-	/**
-	 * 
-	 */
 	private static final int OPTION_LOAN = 3;
-	/**
-	 * 
-	 */
 	private static final int OPTION_ADD = 2;
-	/**
-	 * 
-	 */
 	private static final int OPTION_VIEW = 1;
-	/**
-	 * 
-	 */
 	private static final int OPTION_QUIT = 5;
 	public static void main(String[] args) {
 
@@ -54,13 +38,13 @@ public class ResourceCentre {
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 
-				if (itemType == OPTION_VIEW) {
+				if (itemType == 1) {
 					// Add a camcorder
 					Camcorder cc = inputCamcorder();
 					ResourceCentre.addCamcorder(camcorderList, cc);
 					System.out.println("Camcorder added");
 
-				} else if (itemType == OPTION_ADD) {
+				} else if (itemType == 2) {
 					// Add Chromebook
 					Chromebook cb = inputChromebook();
 					ResourceCentre.addChromebook(chromebookList, cb);
@@ -79,10 +63,10 @@ public class ResourceCentre {
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 
-				if (itemType == OPTION_VIEW) {
+				if (itemType == 1) {
 					// Loan camcorder
 					ResourceCentre.loanCamcorder(camcorderList);
-				} else if (itemType == OPTION_ADD) {
+				} else if (itemType == 2) {
 					// Loan Chromebook
 					ResourceCentre.loanChromebook(chromebookList);
 				} else {
@@ -97,10 +81,10 @@ public class ResourceCentre {
 				System.out.println("2. Chromebook");
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
-				if (itemType == OPTION_VIEW) {
+				if (itemType == 1) {
 					// Return camcorder
 					ResourceCentre.returnCamcorder(camcorderList);
-				} else if (itemType == OPTION_ADD) {
+				} else if (itemType == 2) {
 					// Return Chromebook
 					ResourceCentre.returnChromebook(chromebookList);
 				} else {
